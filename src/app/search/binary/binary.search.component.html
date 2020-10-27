@@ -1,0 +1,23 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <form class="form-inline">
+      <input class="form-control mr-sm-1" placeholder="Size" aria-label="Search" [(ngModel)]="size" name="size" (ngModelChange)="onSizeUpdate()">
+      <input class="form-control mr-sm-1" placeholder="Search number" aria-label="Search" [(ngModel)]="searchNumber" name="searchNumber">
+    </form>
+    <button class="btn btn-outline-success my-2 my-sm-0" (click)="search()">Search</button>
+  </nav>
+</div>
+<div class="root-container">
+  <div class="array-container">
+    [
+    <a *ngFor="let number of numbers; last as isLast; let i = index">
+      <span *ngIf="isLast; else elseBlock"
+        [ngClass]="found && i == cursor ? 'found' : (i == lefBorder || i == rightBorder ? 'border' : ( i== cursor ? 'current' : 'not-found'))">
+        {{number}}</span>
+      <ng-template #elseBlock><span
+        [ngClass]="found && i == cursor ? 'found' : (i == lefBorder || i == rightBorder ? 'border' : ( i== cursor ? 'current' : 'not-found'))">
+        {{number}}</span><span>{{" , "}}</span></ng-template>
+    </a>
+    ]
+  </div>
+</div>

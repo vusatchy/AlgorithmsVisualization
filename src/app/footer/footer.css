@@ -1,0 +1,19 @@
+.navbar{
+  color: #ADEFD1FF;
+}
+
+nav .navbar-nav li a{
+  color: #ADEFD1FF;
+}
+
+nav {
+  background-color: #00203FFF;
+}
+
+.dropdown-menu {
+  background-color: #00203FFF;
+}
+.dropdown-item:hover {
+  color: black;
+  background-color: #ADEFD1FF;
+}

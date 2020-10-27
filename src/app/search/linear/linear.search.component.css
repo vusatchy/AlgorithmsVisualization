@@ -1,0 +1,29 @@
+.root-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.found {
+  background-color: green;
+}
+
+.current {
+  background-color: yellow;
+}
+
+.array-container {
+  font-size: 50px;
+}
+
+button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
